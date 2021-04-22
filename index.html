@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <title>projeto29</title>
+</head>
+<body>
+    <div class="container">
+        <h3>Digite os valores</h3>
+        <div class="position-row">
+            <input data-length="2" type="number" id="txt1" placeholder="value1">
+            <input data-length="2" type="number" id="txt2" placeholder="value2">
+        </div><!--position-row-->
+        <div class="position-num-row">
+            <div onclick="add1()" class="numeros num1">1</div>
+            <div onclick="add2()" class="numeros num2">2</div>
+            <div onclick="add3()" class="numeros num3">3</div>
+            <div onclick="add4()" class="numeros num4">4</div>
+            <div onclick="add5()" class="numeros num5">5</div>
+            <div onclick="add6()" class="numeros num6">6</div>
+            <div onclick="add7()" class="numeros num7">7</div>
+            <div onclick="add8()" class="numeros num8">8</div>
+            <div onclick="add9()" class="numeros num9">9</div>
+        </div><!--position-num-row-->
+        <div class="position-row">
+            <input type="submit" onclick="somar()" value="+">
+            <input type="submit" onclick="subtrair()" value="-">
+            <input type="submit" onclick="mutplicar()" value="x">
+            <input type="submit" onclick="dividir()" value="&#247;">
+        </div>
+        <a href="index.html"><input type="reset" value="Limpar"></a>
+        <div id="res">Resultado</div>
+    </div><!--container-->
+
+
+    <script src="js/script.js"></script>
+    <script src="js/script2.js"></script>
+</body>
+</html>
