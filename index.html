@@ -7,36 +7,68 @@
     <title>projeto29</title>
 </head>
 <body>
-    <div class="container">
-        <h3>Digite valores Inteiros</h3>
-        <div class="position-row">
-            <input data-length="2" type="number" id="txt1" placeholder="value1">
-            <input data-length="2" type="number" id="txt2" placeholder="value2">
-        </div><!--position-row-->
-        <!-- <div class="position-num-row">
-            <div onclick="add1()" class="numeros num1">1</div>
-            <div onclick="add2()" class="numeros num2">2</div>
-            <div onclick="add3()" class="numeros num3">3</div>
-            <div onclick="add4()" class="numeros num4">4</div>
-            <div onclick="add5()" class="numeros num5">5</div>
-            <div onclick="add6()" class="numeros num6">6</div>
-            <div onclick="add7()" class="numeros num7">7</div>
-            <div onclick="add8()" class="numeros num8">8</div>
-            <div onclick="add9()" class="numeros num9">9</div>
-        </div>position-num-row -->
-        <h3>Selecionar Resultado</h3>
-        <div class="position-row">
-            <input type="submit" onclick="somar()" value="+">
-            <input type="submit" onclick="subtrair()" value="-">
-            <input type="submit" onclick="mutplicar()" value="x">
-            <input type="submit" onclick="dividir()" value="&#247;">
-        </div>
-        <a href="index.html"><input type="reset" value="Limpar"></a>
-        <div id="res">Resultado</div>
-    </div><!--container-->
+
+<div class="container">
+
+    <h2>Calculadora</h2>
+
+<form name="calc">
+        
+        <div class="box">
+            <div class="visor">
+                <input class="value" name="txt" type="text">
+            </div>
+
+            <div class="menu">
+
+                <div onclick="calc.txt.value=' '" class="button-clear">C</div>
+
+                <div onclick="calc.txt.value+='/'" class="button-calc">
+                    <div><strong>%</strong></div>
+                </div>
+                
+            </div>
+
+            <div class="w50">
+                
+                <div class="button-number">
+
+                    <div onclick="calc.txt.value+='1'" class="number"><strong>1</strong></div>
+                    <div onclick="calc.txt.value+='2'" class="number"><strong>2</strong></div>
+                    <div onclick="calc.txt.value+='3'" class="number"><strong>3</strong></div>
+
+                    <div onclick="calc.txt.value+='*'"><strong>x</strong></div>
+
+                    <div onclick="calc.txt.value+='4'" class="number"><strong>4</strong></div>
+                    <div onclick="calc.txt.value+='5'" class="number"><strong>5</strong></div>
+                    <div onclick="calc.txt.value+='6'" class="number"><strong>6</strong></div>
+
+                    <div onclick="calc.txt.value+='-'"><strong>-</strong></div>
+
+                    <div onclick="calc.txt.value+='7'" class="number"><strong>7</strong></div>
+                    <div onclick="calc.txt.value+='8'" class="number"><strong>8</strong></div>
+                    <div onclick="calc.txt.value+='9'" class="number"><strong>9</strong></div>
+
+                    <div onclick="calc.txt.value+='+'"><strong>+</strong></div>
+
+                    <div onclick="calc.txt.value+='0'" class="number"><strong>0</strong></div>
+                    <div onclick="calc.txt.value+='00'" class="number"><strong>00</strong></div>
+
+                    <div onclick="calc.txt.value+='.'"><strong>.</strong></div>
+                    
+                    <div class="calc" onclick="document.calc.txt.value=eval(calc.txt.value)"><strong>=</strong></div>
+
+                    
+                    
+            </div><!-- button-number -->
+
+            </div><!-- w50 -->
+
+        </div><!-- box -->
+</form>
+</div><!--container-->
 
 
     <script src="js/script.js"></script>
-    <script src="js/script2.js"></script>
 </body>
 </html>

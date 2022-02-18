@@ -1,6 +1,9 @@
 :root{
 	--background:#e0e5ec;
+	--background2:#000000;
+    --white:#fff;
 	--gray:#797d7f;
+    --blue:#5c87fe;
 }
 
 *{
@@ -10,118 +13,132 @@
 }
 
 body{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    height:900px;
-    overflow: hidden;
+    width:100vw;
+    height:100vh;
     font-family:arial;
-    background-color:var(--background);
+    background: var(--background);
+    /* linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%); */
 }
 
 .container{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 2%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    user-select: none;
+}
+
+h2{
+    text-align: center;
+    margin:20px 0;
+    color:var(--gray);
+}
+
+.box{
+    width:320px;
+    height:470px;
+    display: flex;
+    flex-direction: column;
     background-color:var(--background);
-    height:600px;
-    width:600px;
     box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
     -9px -9px 16px rgba(255, 255, 255, 0.5);
 }
 
-h3{
+.visor{
+    width:100%;
+    height:100px;
+}
+.visor .value {
+    width:100%;
+    height:100%;
+    text-align: right;
+    border:0;
+    border:1px solid #ccc;
+    outline:none;
     font-size:30px;
-    margin-bottom:50px;
-    color:var(--gray);
+    padding-right:10px;
 }
 
-.position-row{
-    display:flex;
+.menu{
+    width:100%;
+    display: flex;
 }
 
-input{
-    border-radius:20px;
-    outline: none;
-    border:1px solid var(--background);
-    box-shadow:-8px -8px 20px 0px #fff9, -6px -6px 6px 0px #fff9, 8px 8px 20px #0001, 5px 5px 6px 0px #0001;
-	
+.button-clear{
+    width:50%;
+    height:60px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-weight:bold;
+    color:var(--white);
+    background-color: red;
+    cursor: pointer;
+
+}
+.button-calc{
+    width:50%;
+    height:60px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-weight:bold;
+    color: var(--blue);
+    background-color: var(--white);
+    border-top:1px solid #ccc;
+    cursor: pointer;
 }
 
-/* input::placeholder{
-    padding:2px;
-} */
+.w50{
+    width:100%;
+    display: flex;
+}
 
-input[type=number]{
-    width:110px;
-    height:40px;
-    font-size:17px;
-    padding:20px;
-    margin:4px 5px;
+.button-number{
+    width:100%;
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.button-number div{
+    width:80px;
+    height:80px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    color:var(--blue);
+    background-color: white;
+    border:1px solid #ccc;
+    cursor: pointer;
+}
+
+
+/* ACTIVE CSS */
+.button-clear:active{
+    color:var(--white);
+    background-color:#cc0c0c;
+}
+
+.button-number div:active{
+    background-color:#ececec;
     
 }
 
-.position-num-row{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    width:220px;
-    height:200px;
-    margin-bottom:20px;
+.button-calc:active{
+    background-color:#ececec;
 }
 
-.numeros{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    margin:10px;
-    width:50px;
-    height:50px;
-    font-size:25px;
-    border-radius:50%;
-    text-align: center;
-    cursor:pointer;
-    background-color:white;
-    box-shadow:-8px -8px 20px 0px #fff9, -6px -6px 6px 0px #fff9, 8px 8px 20px #0001, 5px 5px 6px 0px #0001;
-	color:#5c87fe;
-}
 
-.numeros:active{
-	color:#5c87fe;
-	box-shadow: inset -8px -8px 20px #fff9, inset -5px -5px 6px #fff9, inset 8px 8px 20px #0003, inset 5px 5px 6px #0001;
+.calc{
+    color:var(--white) !important;
+    background-color: #0062ff !important;
 }
-
-input[type=submit]{
-    font-size:25px;
-    width:80px;
-    height:40px;
-    margin:5px 5px;
-    cursor:pointer;
-    color:#5c87fe;
+.calc:active{
+    color:#fff !important;
+    background-color: #004fcf !important;
 }
-
-input[type=submit]:active{
-	color:#5c87fe;
-	box-shadow: inset -4px -4px 20px #fff9, inset -5px -5px 6px #fff9, inset 8px 8px 20px #0003, inset 5px 5px 6px #0001;
-}
-
-input[type=reset]{
-    font-size:25px;
-    width:100px;
-    height:40px;
-    margin:5px 5px;
-    cursor:pointer;
-    color:#cc1919;
-    background-color: #fff;
-}
-input[type=reset]:active{
-    box-shadow: inset -4px -4px 10px #fff9, inset 4px 4px 10px rgba(87, 9, 9, 0.2), inset 5px 5px 6px rgba(255, 0, 0, 0.067);
-}
-#res{
-    margin-top:50px;
-    font-size:25px;
-}
-
