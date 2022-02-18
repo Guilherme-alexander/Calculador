@@ -5,8 +5,7 @@
 ### Calculator mini Projet
 > HTML, CSS, JAVASCRIPT
 
-![preview image](https://github.com/Guilherme-alexander/Calculador/blob/main/img-calculadora.jpeg)
-
+![preview image](https://github.com/Guilherme-alexander/Calculador/blob/main/gif-calculator.gif)
 
 ## HTML
 ```html
@@ -28,3 +27,5 @@
  onclick="document.calc.txt.value=eval(calc.txt.value)" //code: sum input values
 ```
 
+>### image
+![preview image](https://github.com/Guilherme-alexander/Calculador/blob/main/img-calculadora.jpeg)
