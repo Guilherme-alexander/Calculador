@@ -10,7 +10,7 @@
 
 <div class="container">
 
-    <h2>Calculator</h2>
+    <h2>© Calculator</h2>
 
 <form name="calc">
         
@@ -23,8 +23,9 @@
 
                 <div onclick="calc.txt.value=' '" class="button-clear">C</div>
 
-                <div onclick="calc.txt.value+='/'" class="button-calc">
-                    <div><strong>%</strong></div>
+                <div class="button-calc">
+                    <div onclick="calc.txt.value=Math.sqrt(calc.txt.value)"><strong>√¯</strong></div>
+                    <div onclick="calc.txt.value+='/'"><strong>÷</strong></div>
                 </div>
                 
             </div>
@@ -33,28 +34,28 @@
                 
                 <div class="button-number">
 
-                    <div onclick="calc.txt.value+='1'" class="number"><strong>1</strong></div>
-                    <div onclick="calc.txt.value+='2'" class="number"><strong>2</strong></div>
-                    <div onclick="calc.txt.value+='3'" class="number"><strong>3</strong></div>
+                    <div onclick="calc.txt.value+='7'" class="number btn"><strong>7</strong></div>
+                    <div onclick="calc.txt.value+='8'" class="number btn"><strong>8</strong></div>
+                    <div onclick="calc.txt.value+='9'" class="number btn"><strong>9</strong></div>
 
-                    <div onclick="calc.txt.value+='*'"><strong>x</strong></div>
+                    <div class="btn-soma" onclick="calc.txt.value+='*'"><strong>x</strong></div>
 
-                    <div onclick="calc.txt.value+='4'" class="number"><strong>4</strong></div>
-                    <div onclick="calc.txt.value+='5'" class="number"><strong>5</strong></div>
-                    <div onclick="calc.txt.value+='6'" class="number"><strong>6</strong></div>
+                    <div onclick="calc.txt.value+='4'" class="number btn"><strong>4</strong></div>
+                    <div onclick="calc.txt.value+='5'" class="number btn"><strong>5</strong></div>
+                    <div onclick="calc.txt.value+='6'" class="number btn"><strong>6</strong></div>
 
-                    <div onclick="calc.txt.value+='-'"><strong>-</strong></div>
+                    <div class="btn-soma" onclick="calc.txt.value+='-'"><strong>-</strong></div>
 
-                    <div onclick="calc.txt.value+='7'" class="number"><strong>7</strong></div>
-                    <div onclick="calc.txt.value+='8'" class="number"><strong>8</strong></div>
-                    <div onclick="calc.txt.value+='9'" class="number"><strong>9</strong></div>
+                    <div onclick="calc.txt.value+='1'" class="number btn"><strong>1</strong></div>
+                    <div onclick="calc.txt.value+='2'" class="number btn"><strong>2</strong></div>
+                    <div onclick="calc.txt.value+='3'" class="number btn"><strong>3</strong></div>
 
-                    <div onclick="calc.txt.value+='+'"><strong>+</strong></div>
+                    <div class="btn-soma" onclick="calc.txt.value+='+'"><strong>+</strong></div>
 
-                    <div onclick="calc.txt.value+='0'" class="number"><strong>0</strong></div>
-                    <div onclick="calc.txt.value+='00'" class="number"><strong>00</strong></div>
+                    <div onclick="calc.txt.value+='0'" class="number btn"><strong>0</strong></div>
+                    <div onclick="calc.txt.value+='00'" class="number btn"><strong>00</strong></div>
 
-                    <div onclick="calc.txt.value+='.'"><strong>.</strong></div>
+                    <div class="btn" onclick="calc.txt.value+='.'"><strong>.</strong></div>
                     
                     <div class="calc" onclick="document.calc.txt.value=eval(calc.txt.value)"><strong>=</strong></div>
 
